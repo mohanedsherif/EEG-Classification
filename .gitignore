@@ -1,8 +1,10 @@
-# Data files (too large for git — download from Kaggle)
-training/
-testing/
+# Data files (download from Kaggle)
+/training/
+/testing/
 
-# Output files
+# Generated outputs
+experiments/results/*.png
+experiments/results/*.json
 submission.csv
 *.png
 
@@ -13,6 +15,9 @@ __pycache__/
 .venv/
 venv/
 env/
+*.egg-info/
+dist/
+build/
 
 # Jupyter
 .ipynb_checkpoints/

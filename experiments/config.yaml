@@ -1,0 +1,36 @@
+data:
+  train_path: ./training
+  test_path:  ./testing
+
+preprocessing:
+  fs: 200
+  include_plv: true
+  zscore_per_subject: true
+
+freq_bands:
+  delta: [1,  4]
+  theta: [4,  8]
+  alpha: [8,  12]
+  beta:  [12, 30]
+  gamma: [30, 45]
+
+time_windows:
+  early: [0.00, 0.33]
+  mid:   [0.33, 0.67]
+  late:  [0.67, 1.00]
+  full:  [0.00, 1.00]
+
+eegnet:
+  n_epochs:      150
+  lr:            0.001
+  weight_decay:  0.0001
+  batch_size:    64
+  kernel_length: 64
+  f1:            8
+  d:             2
+  dropout:       0.25
+  patience:      20
+
+loocv:
+  val_subject:  true    # use one training subject for early stopping (EEGNet)
+  random_seed:  42

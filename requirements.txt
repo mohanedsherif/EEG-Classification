@@ -1,6 +1,16 @@
+# Core — always required
 numpy>=1.24
 h5py>=3.8
-pandas>=2.0
 scipy>=1.10
 scikit-learn>=1.3
 matplotlib>=3.7
+pandas>=2.0
+pyyaml>=6.0
+
+# Optional — deep learning (EEGNet)
+# Install with: pip install torch --index-url https://download.pytorch.org/whl/cpu
+# torch>=2.0
+
+# Optional — Riemannian geometry classifier
+# Install with: pip install pyriemann
+# pyriemann>=0.5
